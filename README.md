@@ -59,7 +59,15 @@ A medida `Total vendido simulado` utiliza de um parâmetro dinâmico desconectad
 
 ---
 
-## Modelagem
+# Dashboard Interativo
+
+- [Clique aqui para visualizar o dashboard de maneira interativa](https://app.powerbi.com/view?r=eyJrIjoiMzEyOGJmOWEtNWI5Yi00ODMwLTkyMDQtZWRjMWZiZmViNWQzIiwidCI6IjcwY2NiOWM1LTc4NjgtNGYxMi05NTUxLTJjYmE1YTE5NWUxYyJ9)
+
+
+**⚠️ Limitações - O visual Árvore de Decomposição não é exibido no link público devido a restrições do Power BI para recursos de IA em embeds públicos.** <br />
+
+
+## 🛢 Modelagem dos dados
 
 ![Modelagem_vendas](img/modelagem_vendas.png) ![Modelagem_metas](img/modelagem_metas.png)
 
@@ -74,9 +82,9 @@ O modelo segue arquitetura **Star Schema** com duas tabelas fato e quatro dimens
 
 ---
 
-## Medidas DAX
+## 🔎 Medidas DAX
 
-As medidas foram organizadas em **pastas** por categoria, seguindo boas práticas de governança do modelo:
+As medidas foram organizadas em **pastas** por categoria, seguindo boas práticas de orgnaização do modelo:
 
 **Inteligência de Tempo** — `TOTALYTD`, `SAMEPERIODLASTYEAR`, `DATESBETWEEN` para comparações de período que se comportam corretamente com qualquer filtro de data aplicado pelo usuário.
 
@@ -86,7 +94,9 @@ As medidas foram organizadas em **pastas** por categoria, seguindo boas prática
 
 A medida de meta por período calcula dinamicamente o percentual de participação de cada vendedor no total do ano e aplica esse percentual sobre a meta anual do estado, distribuindo a meta ao longo dos meses proporcionalmente ao ritmo real de vendas.
 
-👉 ![Clique aqui para baixar o arquivo .pbix do dashboard](
+👉 ![Clique aqui para baixar o arquivo .pbix do dashboard](https://github.com/lucasgerc/Painel_Comercial/blob/main/dash_pbix/Painel_analitico_vendas.pbix)
+
+
 
 ---
 
@@ -100,8 +110,4 @@ A medida de meta por período calcula dinamicamente o percentual de participaç�
 - Indicadores + Botões para alternância entre mapa e gráfico de barras na página de vendas, que detalha o total vendido por estado
 - Árvore Hierárquica para análise clara e coesa de vendas por vendedor e categoria
 - Formatação condicional para destaque visual de performance vs. meta
-- Pastas para organização e governança das medidas
-
----
-
-🛠️ Power BI · DAX · Power Query · Star Schema · What-If Analysis
+- Pastas para organização das medidas
