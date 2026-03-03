@@ -4,11 +4,11 @@ Dashboard comercial desenvolvido para dar ao gestor uma visão completa da opera
 
 ---
 
-## 🖥️ Informações do projeto - Páginas do Dashboard
+## 🖥️ - Informações do projeto - Páginas do Dashboard
 
 ### Início
 
-![Início](images/Menu.png)
+![Início](img/Menu.png)
 
 Tela de navegação com menu lateral e visão macro do total vendido por ano. Serve como ponto de entrada com seletor de ano e acesso direto às demais páginas.
 
@@ -18,7 +18,11 @@ Tela de navegação com menu lateral e visão macro do total vendido por ano. Se
 
 ![Vendas](img/Vendas.png)
 
-Visão consolidada do faturamento com acompanhamento da meta no período analisado. Em 2023, o total vendido chegou a R$ 867 Mi contra uma meta de R$ 488 Mi — 177% de atingimento. O painel deixa claro em quais meses o ritmo ficou acima da linha de meta e onde houve queda, com ranking visual dos top vendedores e distribuição geográfica por estado. A alternância entre **mapa e gráfico de barras** foi implementada com Indicadores + Botões, sem necessidade de página adicional.
+* Visão consolidada do faturamento com acompanhamento da meta no período analisado. Em 2023, o total vendido chegou a R$ 867 Mi contra uma meta de R$ 488 Mi — 177% de atingimento. 
+
+* O painel deixa claro em quais meses o ritmo ficou acima da linha de meta e onde houve queda, com ranking visual dos top vendedores e distribuição geográfica por estado. Quando 90% da meta é atingido, já é gerado um indicador(✅) positivo
+
+**A alternância entre **mapa e gráfico de barras** foi implementada com Indicadores + Botões, sem necessidade de página adicional.**
 
 ---
 
@@ -26,7 +30,9 @@ Visão consolidada do faturamento com acompanhamento da meta no período analisa
 
 ![Performance de Vendedores](img/Vendedores.png)
 
-Detalhamento individual da equipe de vendedores com uma análise por categoria utilizando a árvore hierárquica. É possível ver não só quanto cada vendedor faturou, mas em quais categorias ele concentra sua performance, que é útil para identificar se um vendedor é forte em várias frentes ou depende de uma categoria específica para sustentar seus números. A matriz com os vendedores e seus respectivos faturamentos também conta com uma **TOOLTIP** interativa, que basta passar o mouse em cima de cada vendedor é possível observar quanto ele vendeu, o valor de sua meta e um gráfico de indicador que mostra se o vendedor conseguiu ter uma boa perfomance no atingimento da meta
+ Detalhamento individual da equipe de vendedores com uma análise por categoria utilizando a árvore hierárquica. É possível ver não só quanto cada vendedor faturou, mas em quais categorias ele concentra sua performance, que é útil para identificar se um vendedor é forte em várias frentes ou depende de uma categoria específica para sustentar seus números. 
+
+ A matriz com os vendedores e seus respectivos faturamentos também conta com uma **tooltip** interativa, que basta passar o mouse em cima de cada vendedor é possível observar quanto ele vendeu, o valor de sua meta e um gráfico de indicador que mostra se o vendedor conseguiu ter uma boa perfomance no atingimento da meta
 
 - **Nota sobre o % Atingido da Meta:** Alguns vendedores apresentam percentuais muito acima do esperado. A base de metas utilizada é pública e pré-formatada por estado/categoria, sem metas individuais por vendedor. A medida distribui a meta do estado proporcionalmente à participação de cada vendedor no total da empresa — o que, combinado com inconsistências nos valores da base de 2023 (metas de estados-chave como SP e RJ desproporcionalmente baixas), produz distorções no indicador. Em um ambiente produtivo, esse ponto seria endereçado com metas individuais cadastradas ou uma distribuição baseada no total de vendas do estado.
 
@@ -36,7 +42,7 @@ Detalhamento individual da equipe de vendedores com uma análise por categoria u
 
 ![Análise Ano x Ano](img/Ano_Ano.png)
 
-Comparativo direto entre o ano atual e o anterior, mês a mês e acumulado. O salto de R$ 719 Mi (2022) para R$ 867 Mi (2023) representa crescimento de ~20,6%. A curva acumulada dos dois anos lado a lado deixa evidente se o crescimento foi consistente ao longo do ano ou concentrado em poucos meses. Todas as categorias aparecem com variação percentual, facilitando a identificação de onde o crescimento veio de fato e onde houve retração.
+Comparativo direto entre o ano atual e o anterior, mês a mês e acumulado. O salto de R$ 719 Mi (2022) para R$ 867 Mi (2023) representa crescimento de aproximadamente 20,6%. A curva acumulada dos dois anos lado a lado deixa evidente se o crescimento foi consistente ao longo do ano ou concentrado em poucos meses. Todas as categorias aparecem com variação percentual, facilitando a identificação de onde o crescimento veio de fato e onde houve retração.
 
 ---
 
@@ -52,8 +58,7 @@ A medida `Total vendido simulado` utiliza de um parâmetro dinâmico desconectad
 
 ## Modelagem
 
-![Modelagem_vendas](img/modelagem_vendas.png)
-![Modelagem_metas](img/modelagem_metas.png)
+![Modelagem_vendas](img/modelagem_vendas.png) ![Modelagem_metas](img/modelagem_metas.png)
 
 O modelo segue arquitetura **Star Schema** com duas tabelas fato e quatro dimensões:
 
@@ -68,7 +73,7 @@ O modelo segue arquitetura **Star Schema** com duas tabelas fato e quatro dimens
 
 ## Medidas DAX
 
-![Medidas](img/medidas.png)
+![Medidas](img/Medidas.png)
 
 As medidas foram organizadas em **pastas** por categoria, seguindo boas práticas de governança do modelo:
 
