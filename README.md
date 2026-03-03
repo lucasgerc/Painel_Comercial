@@ -63,6 +63,8 @@ A medida `Total vendido simulado` utiliza de um parâmetro dinâmico desconectad
 
 - [Clique aqui para visualizar o dashboard de maneira interativa](https://app.powerbi.com/view?r=eyJrIjoiMzEyOGJmOWEtNWI5Yi00ODMwLTkyMDQtZWRjMWZiZmViNWQzIiwidCI6IjcwY2NiOWM1LTc4NjgtNGYxMi05NTUxLTJjYmE1YTE5NWUxYyJ9)
 
+**⚠️ Limitações - Ao tentar expandir a árvore hierárquica, o visual não é exibido no link público devido a restrições do Power BI para recursos de IA**
+
 
 ## 🛢 Modelagem dos dados
 
