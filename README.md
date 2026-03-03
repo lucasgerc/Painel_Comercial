@@ -32,11 +32,11 @@ Dashboard comercial desenvolvido para dar ao gestor uma visão completa da opera
 
 ![Performance de Vendedores](img/Vendedores.png)
 
- Detalhamento individual da equipe de vendedores com uma análise por categoria utilizando a árvore hierárquica. É possível ver não só quanto cada vendedor faturou, mas em quais categorias ele concentra sua performance, que é útil para identificar se um vendedor é forte em várias frentes ou depende de uma categoria específica para sustentar seus números. 
+* Detalhamento individual da equipe de vendedores com uma análise por categoria utilizando a árvore hierárquica. É possível ver não só quanto cada vendedor faturou, mas em quais categorias ele concentra sua performance, que é útil para identificar se um vendedor é forte em várias frentes ou depende de uma categoria específica para sustentar seus números. 
 
- A matriz com os vendedores e seus respectivos faturamentos também conta com uma **tooltip** interativa. Basta passar o mouse em cima de cada vendedor que é possível observar quanto ele vendeu, o valor de sua meta e um gráfico de indicador que mostra se o vendedor conseguiu ter uma boa perfomance no atingimento da meta.
+ * A matriz com os vendedores e seus respectivos faturamentos também conta com uma **tooltip** interativa. Basta passar o mouse em cima de cada vendedor que é possível observar quanto ele vendeu, o valor de sua meta e um gráfico de indicador que mostra se o vendedor conseguiu ter uma boa perfomance no atingimento da meta.
 
-- **Nota sobre o % Atingido da Meta:** Alguns vendedores apresentam percentuais muito acima do esperado. A base de metas utilizada é pública e pré-formatada por estado/categoria, sem metas individuais por vendedor. A medida distribui a meta do estado proporcionalmente à participação de cada vendedor no total da empresa — o que, combinado com inconsistências nos valores da base de 2023 (metas de estados-chave como SP e RJ desproporcionalmente baixas), produz distorções no indicador. Em um ambiente produtivo, esse ponto seria endereçado com metas individuais cadastradas ou uma distribuição baseada no total de vendas do estado.
+- **Nota sobre o % Atingido da Meta:** Alguns vendedores apresentam percentuais muito acima do esperado. A base de metas utilizada é pública e pré-formatada por estado/categoria, sem metas individuais por vendedor. A medida distribui a meta do estado proporcionalmente à participação de cada vendedor no total da empresa, que faz gerar inconsistências nos valores da base de 2023 (metas de estados-chave como SP e RJ desproporcionalmente baixas), produzindo distorções no indicador. Em um ambiente produtivo, esse ponto seria endereçado com metas individuais cadastradas ou uma distribuição baseada no total de vendas do estado.
 
 ---
 
@@ -53,9 +53,9 @@ Dashboard comercial desenvolvido para dar ao gestor uma visão completa da opera
 
 ![Simulação de Cenário](img/Simulacoes.png)
 
-O gestor consegue simular o impacto de um aumento de preço na receita total antes de tomar qualquer decisão. Com um slider, ele ajusta a variação percentual e vê instantaneamente o novo faturamento projetado, a diferença em R$ e obtém uma análise também por categoria. Com 10% de aumento, por exemplo, a receita simulada passaria de R$ 867 Mi para R$ 941 Mi — uma variação de R$ 74 Mi.
+* O gestor consegue simular o impacto de um aumento de preço na receita total antes de tomar qualquer decisão. Com um slider, ele ajusta a variação percentual e vê instantaneamente o novo faturamento projetado, a diferença em R$ e obtém uma análise também por categoria. Com 10% de aumento, por exemplo, a receita simulada passaria de R$ 867 Mi para R$ 941 Mi, ou seja, uma variação de R$ 74 Mi.
 
-A medida `Total vendido simulado` utiliza de um parâmetro dinâmico desconectado da tabela fato. O dado original permanece intacto; o cenário é calculado inteiramente como uma forma de inteligência analítica, grantindo que  nenhuma simulação venha a afetar os números reais do modelo.
+* A medida `Total vendido simulado` utiliza de um parâmetro dinâmico desconectado da tabela fato. O dado original permanece intacto, o cenário é calculado inteiramente como uma forma de inteligência analítica, garantindo que  nenhuma simulação venha a afetar os números reais do modelo.
 
 ---
 
@@ -72,7 +72,7 @@ A medida `Total vendido simulado` utiliza de um parâmetro dinâmico desconectad
 
 O modelo segue arquitetura **Star Schema** com duas tabelas fato e quatro dimensões:
 
-- `fVendas` — Dados de todas as vendas
+- `fVendas' — Dados de todas as vendas
 - `fMetas` — Metas por ano, categoria e estado
 - `dCalendario` — Tabela de datas com dias úteis e feriados, criada totalmente pela linguagem M
 - `dProdutos` — Categorias dos produto
