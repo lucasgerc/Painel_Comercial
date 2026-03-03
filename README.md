@@ -1,4 +1,4 @@
-# Painel Estratégico Comercial — Power BI 📊
+# 📊 Painel Estratégico Comercial — Power BI
 
 Dashboard comercial desenvolvido para dar ao gestor uma visão completa da operação de negócio: do acompanhamento vendas e metas até a simulação de impacto de decisões de preço. O painel cobre dados de 2021 a 2023 e foi estruturado para análises operacionais e decisões estratégicas.
 
@@ -62,9 +62,6 @@ A medida `Total vendido simulado` utiliza de um parâmetro dinâmico desconectad
 # Dashboard Interativo
 
 - [Clique aqui para visualizar o dashboard de maneira interativa](https://app.powerbi.com/view?r=eyJrIjoiMzEyOGJmOWEtNWI5Yi00ODMwLTkyMDQtZWRjMWZiZmViNWQzIiwidCI6IjcwY2NiOWM1LTc4NjgtNGYxMi05NTUxLTJjYmE1YTE5NWUxYyJ9)
-
-
-**⚠️ Limitações - O visual Árvore de Decomposição não é exibido no link público devido a restrições do Power BI para recursos de IA em embeds públicos.** <br />
 
 
 ## 🛢 Modelagem dos dados
